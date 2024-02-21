@@ -34,3 +34,16 @@ const update=(index,newtitel,newdescrption,newduedate,iscomplete)=>{
 //updating task
 update(1,'Learn','learning node js','2024-3-11',false);
 console.log(tasks);
+//function to remove a task
+const removetask=(index)=>{
+    if (index>=0&&index<=tasks.length){
+        tasks.splice(index,1);
+    }
+    else{
+        console.log('task does not exist!');
+    }
+
+} 
+//removing a task
+removetask(2);
+console.log(tasks);
