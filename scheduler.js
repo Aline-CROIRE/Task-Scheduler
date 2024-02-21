@@ -22,6 +22,7 @@ const displaytasks=()=>{
     console.log(sortedTasks);
 }
 //calling displaytasks function
+console.log('Scheduler tasks:');
 displaytasks();
 //function to update task
 const update=(index,newtitel,newdescrption,newduedate,iscomplete)=>{
@@ -30,7 +31,11 @@ const update=(index,newtitel,newdescrption,newduedate,iscomplete)=>{
         tasks[index].descrption=newdescrption;
         tasks[index].duedate=newduedate;
         tasks[index].completed=iscomplete;}
+        else {
+            console.log('task does not exist!');
+        }
     }
+
 //updating task
 update(1,'Learn','learning node js','2024-3-11',false);
 console.log(tasks);
